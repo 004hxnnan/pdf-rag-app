@@ -5,8 +5,6 @@ langchain-community
 langchain-groq
 langchain-huggingface
 langchain-text-splitters
-langchain.chains
-langchain.chains.combine_documents
 pypdf
 faiss-cpu
 sentence-transformers

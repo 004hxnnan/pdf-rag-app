@@ -1,7 +1,7 @@
 import streamlit as st
 import os
-from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from pypdf import PdfReader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_groq import ChatGroq
@@ -56,9 +56,9 @@ if uploaded_file is not None:
             
         st.success("PDF processed successfully!")
 
-    # Initialize ChatGroq LLM (Using Llama3 for speed and quality)
+    # Initialize ChatGroq LLM
     llm = ChatGroq(
-        model_name="llama3-8b-8192", 
+        model_name="llama-3.1-8b-instant", 
         temperature=0.1
     )
 
